@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.signup-body{
+    width: 90%;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    .first-part{
+        width: 40%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .logo{
+            width: 90%;
+            padding: 1em 0;
+            img{
+                width: 30%;
+            }
+        }
+        h1{
+            width: 90%;
+            padding: 1em 0;
+        }
+        
+        .form{
+            overflow: hidden;
+            height: 50%;
+            transition: all 1s ease;
+            width: 90%;
+            position: relative;
+            .page{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                transition: all 0.5s;
+                position: absolute;
+            }
+            .page2{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                transition: all 0.5s;
+                right: -100%;
+                .btn1{
+                    width: 100%;
+                    padding: 1em 0;
+                    button{
+                        border: none;
+                        height: 40px;
+                        width: 100px;
+                        font-size: 14px;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-weight: 600;
+                        background: none;
+                        cursor: pointer;
+                    }
+                    .Submit{
+                        background-color: rgb(0,80,221);
+                        color: white;
+                        border-radius: 5px;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-weight: 600;
+                    }
+                }
+            }
+            .container{
+                display: flex;
+                align-items: end;
+                justify-content: space-between;
+                button{
+                    border: none;
+                    background: none;
+                    cursor: pointer;
+                    #novisibleone{
+                        display: none;
+                    }
+                    #novisible{
+                        display: none;
+                    }
+                }
+                label{
+                    font-size: 16px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-weight: 700;
+                }
+                input, select{
+                    height: 50px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-weight: 600;
+                    padding: 0 0 0 10px;
+                    width: 70%;
+                    border: none;
+                    background: none;
+                    border-bottom: 1px solid black;
+                    outline: none;
+                }
+            }
+            .container2{
+                width: 90%;
+                display: flex;
+                gap: 5px;
+                align-items: center;
+                label{
+                    font-size: 14px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-weight: 600;
+                }
+            }
+            .btn{
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                padding: 1em 0;
+                button{
+                    height: 40px;
+                    background-color: rgb(0,80,221);
+                    color: white;
+                    border: none;
+                    border-radius: 5px;
+                    width: 40px;
+                }
+            }
+        }
+        
+    }
+    .second-part{
+        width: 60%;
+        position: relative;
+        img{
+            width: 100%;
+        }
+        .general{
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            p{
+                font-size: 17px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 500;
+                color: white;
+            }
+            .two{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 2.5em;
+                p{
+                    color: lightgray;
+                    font-weight: 600;
+                }
+                a{
+                    text-decoration: none;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+}

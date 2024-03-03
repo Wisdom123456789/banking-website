@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: red;
+    padding: 1em 0;
+    .general-div{
+        width: 90%;
+        background-color: blue;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo{
+            width: 9%;
+            background-color: orange;
+            img{
+                width: 100%;
+            }
+        }
+        .btn{
+            background-color: green;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            button{
+                width: 150px;
+                background: none;
+                height: 40px;
+                border-radius: 5px;
+                border: none;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 14px;
+            }
+            .join{
+                background-color: red;
+                font-weight: 800;
+            }
+        }
+    }
+}
+main{
+    width: 100%;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .section-one{
+        display: flex;
+        background-color: green;
+        align-items: center;
+        padding: 2em 0;
+        width: 90%;
+        justify-content: space-between;
+        .first-part{
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            background-color: yellow;
+            .button{
+                width: 100%;
+                display: flex;
+                gap: 10px;
+                background-color: pink;
+                button{
+                    height: 40px;
+                    width: 100px;
+                    border: 5px;
+                    font-size: 14px;
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+            }
+            h1{
+                font-size: 42px;
+                font-weight: 900;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            p{
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 17.5px;
+                font-weight: 600;
+                line-height: 26px;
+            }
+        }
+        .second-part{
+            width: 40%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .section-two{
+        background-color: gray;
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 2em 0;
+        gap: 20px;
+        justify-content: center;
+        .box{
+            background-color: firebrick;
+            width: 290px;
+            height: 128px;
+            display: flex;
+            border-radius: 5px;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-evenly;
+            .svg{
+                width: 90%;
+                background-color: pink;
+            }
+            .text{
+                background-color: yellow;
+                width: 90%;
+                p{
+                    font-size: 13px;
+                    font-weight: 900;
+                    line-height: 20px;
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+            }
+        }
+    }
+    .section-three{
+        width: 90%;
+        background-color: indianred;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2em 0;
+        .part-one{
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            background-color: green;
+            h1{
+                font-size: 31px;
+                font-family: Arial, Helvetica, sans-serif;
+                line-height: 43px;
+                font-weight: 900;
+            }
+            p{
+                font-size: 14px;
+                line-height: 21px;
+                font-weight: 400;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            a{
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+            }
+        }
+        .image-three{
+            width: 40%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}

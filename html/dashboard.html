@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+    <header>
+        <div class="general">
+            <div class="logo">
+                <img src="../pictures/SAGE_Publishing_logo_2023.svg.png" alt="">
+            </div>
+            <div class="navigation">
+                <div class="each-nav">
+                    <button onclick="homepage()" id="home"><span class="material-symbols-outlined">home</span><p>Home</p></button>
+                </div>
+                <div class="each-nav">
+                    <button onclick="sendpage()" id="send"><span class="material-symbols-outlined">send</span><p>send</p></button>
+                </div>
+                <div class="each-nav">
+                    <button onclick="paypage()" id="receipt"><span class="material-symbols-outlined">receipt</span><p>Pay</p></button>
+                </div>
+                <div class="each-nav">
+                    <button onclick="budgetpage()" id="budget"><span class="material-symbols-outlined">pie_chart</span><p>Budget</p></button>
+                </div>
+                <div class="each-nav">
+                    <button onclick="cardpage()" id="card"><span class="material-symbols-outlined">credit_card</span><p>Card</p></button>
+                </div>
+            </div>
+            <div class="account">
+                <p>Account</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="home-page" id="home_page">
+            <div class="intro">
+                <h2>Welcome <span id="username"></span>!</h2>
+            </div>
+            <div class="nigeria-amount">
+                <div class="first-one">
+                    <div class="pop-up">
+                        <span class="material-symbols-outlined">more_horiz</span>
+                    </div>
+                    <div class="flag">
+                        <img src="../pictures/How-Cryptocurrencies-Might-Affect-the-Banking-Sector.webp" alt="">
+                    </div>
+                    <div class="currency" onclick="itdisappears()">
+                        <small>Nigerian Naira</small>
+                        <h2 id="currency">₦<span>1000.00</span></h2>
+                        <small id="updateTime"></small>
+                    </div>
+                </div>
+                <div class="second-part">
+                    <button><span class="material-symbols-outlined">change_circle</span> Convert</button>
+                    <button><span class="material-symbols-outlined">add_circle</span> Add Money</button>
+                </div>
+            </div>
+            <div class="button-below">
+                <button onclick="spend()"><span class="material-symbols-outlined">payments</span>Spend</button>
+                <button onclick="saveinfo()" id="saveinfo"><span class="material-symbols-outlined">savings</span>Save</button>
+                <button onclick="borrow()"><span class="material-symbols-outlined">savings</span>Borrow</button>
+                <button onclick="invest()"><span class="material-symbols-outlined">savings</span>Invest</button>
+            </div>
+            <div class="save-div" id="save_div">
+                <div class="general">
+                    <h4>Sage Pockets</h4>
+                    <p>Put money away daily, weekly, monthly or as you spend.</p>
+                    <img src="../pictures/istockphoto-1266251072-1024x1024.jpg" alt="">
+                    <button>Save Now</button>
+                </div>
+            </div>
+            <div class="invest-div" id="invest_div">
+                <div class="general-invest">
+                    <h4>Investments made easy</h4>
+                    <img src="../pictures/invess.webp" alt="">
+                    <p>Buy stocks with as little as $10.</p>
+                    <button>Find Stock</button>
+                    <small>Kuda doesn’t give investment advice. Please, consult your legal, financial and tax advisers before you buy stocks.</small>
+                    <small>Powered by SAGE</small>
+                </div>
+            </div>
+            <div class="borrow-div" id="borrow_div">
+                <div class="general-borrow">
+                    <div class="container">
+                        <h4>Overdraft</h4>
+                        <p>Spend whenever your account balance is low and repay whenever you get paid</p>
+                    </div>
+                    <div class="container">
+                        <h4>Loan</h4>
+                        <p>Apply for a low-interest loan, get money in minutes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="changeable">
+                <div class="div-one" id="div_one">
+                    <div class="inside-div-one">
+                        <div class="text-area">
+                            <h1>Your NGN account is all set</h1>
+                            <p>We’re really happy that you picked us to look after your money. Your Nigerian Naira account number is <span></span></p>
+                        </div>
+                        <div class="image">
+                            <img src="../pictures/SAGE_Publishing_logo_2023.svg.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="div-two" id="div_two">
+                    <div class="nothing-image">
+                        <svg width="63" height="63" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="31.5" cy="31.5" r="31.5" fill="#DBDCE0"></circle>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M18 21C18 19.3431 19.3431 18 21 18H41.3077C42.9645 18 44.3077 19.3431 44.3077 21V41.3077C44.3077 42.9645 42.9645 44.3077 41.3077 44.3077H21C19.3431 44.3077 18 42.9645 18 41.3077V21ZM21.4615 24.4615C21.4615 22.8047 22.8047 21.4615 24.4615 21.4615H38.5385C40.1953 21.4615 41.5385 22.8047 41.5385 24.4615V33.7097C41.5385 35.3569 40.2031 36.6923 38.5558 36.6923H35.6389C35.4527 36.6923 35.3078 36.8523 35.3078 37.0385C35.3078 39.1414 33.603 40.8462 31.5001 40.8462C29.3972 40.8462 27.6924 39.1414 27.6924 37.0385C27.6924 36.8523 27.5475 36.6923 27.3613 36.6923H24.4443C22.797 36.6923 21.4615 35.3569 21.4615 33.7095V24.4615Z" fill="white"></path>
+                        </svg>
+                    </div>
+                    <div class="nothing-text">
+                        <h2>Nothing to see yet</h2>
+                        <p>Send some money and we will show you your transactions Here</p>
+                    </div>
+                </div>
+                <div class="div-three" id="div_three">
+                    <div class="transactions">
+                        <p>Transactions</p>
+                        <select name="" id="">
+                            <option>Recent</option>
+                            <option>February</option>
+                            <option>January</option>
+                        </select>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Name</td>
+                                <td>Method</td>
+                                <td>Date</td>
+                                <td>Time</td>
+                                <td>Description</td>
+                                <td>Amount</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+    
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="send-page" id="send_page">
+            <div class="general-send-page">
+                <h1>Send</h1>
+                <div class="container">
+                    <div class="small-container">
+                        <div class="inside-small-container">
+                            <div class="text">
+                                <h4>Send to Beneficiaries</h4>
+                                <p>Add a beneficiary to get started.</p>
+                            </div>
+                            <button>Add</button>
+                        </div>
+                    </div>
+                    <div class="small-container">
+                        <div class="inside-small-container">
+                            <div class="text">
+                                <h4>Send to Beneficiaries</h4>
+                                <p>Add a beneficiary to get started.</p>
+                            </div>
+                            <button class="icons"><span class="material-symbols-outlined">chevron_right</span></button>
+                        </div>
+                    </div>
+                    <div class="small-container">
+                        <div class="inside-small-container">
+                            <div class="text">
+                                <h4>Send to Beneficiaries</h4>
+                                <p>Add a beneficiary to get started.</p>
+                            </div>
+                            <button class="icons"><span class="material-symbols-outlined">chevron_right</span></button>
+                        </div>
+                    </div>  
+                </div>
+                <div class="not">
+                    <div class="inside-not">
+                        <h4>Recent</h4>
+                    </div>
+                    <div class="icon">
+                        <svg width="63" height="63" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="31.5" cy="31.5" r="31.5" fill="#DBDCE0"></circle><path fill-rule="evenodd" clip-rule="evenodd" d="M18 21C18 19.3431 19.3431 18 21 18H41.3077C42.9645 18 44.3077 19.3431 44.3077 21V41.3077C44.3077 42.9645 42.9645 44.3077 41.3077 44.3077H21C19.3431 44.3077 18 42.9645 18 41.3077V21ZM21.4615 24.4615C21.4615 22.8047 22.8047 21.4615 24.4615 21.4615H38.5385C40.1953 21.4615 41.5385 22.8047 41.5385 24.4615V33.7097C41.5385 35.3569 40.2031 36.6923 38.5558 36.6923H35.6389C35.4527 36.6923 35.3078 36.8523 35.3078 37.0385C35.3078 39.1414 33.603 40.8462 31.5001 40.8462C29.3972 40.8462 27.6924 39.1414 27.6924 37.0385C27.6924 36.8523 27.5475 36.6923 27.3613 36.6923H24.4443C22.797 36.6923 21.4615 35.3569 21.4615 33.7095V24.4615Z" fill="white"></path></svg>
+                        <h4>Nothing to see yet.</h4>
+                        <p>Send some money and we’ll show you your recent transactions here.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="budget-page" id="budget_page">
+            <h2>Budget</h2>
+            <div class="inside-budget-page">
+                <div class="container">
+                    <h4>Budgeting is coming soon</h4>
+                    <p>We’ll let you know when it’s ready</p>
+                    <img src="../pictures/budget-planner-concept-icon-set-template-banner-modern-orange-color-style-circle-round-shape-vector-illustration-210957934.webp" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="pay-page" id="pay_page">
+            <h1>Pay</h1>
+            <div class="inside-pay-page">
+                <div class="essentials">
+                    <h2>Essentials</h2>
+                    <div class="container">
+                        <div class="box">
+                            <div class="icons">
+                                <span class="material-symbols-outlined">wifi</span>
+                                <p>Airtel</p>
+                            </div>
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </div>
+                        <div class="box">
+                            <div class="icons">
+                                <span class="material-symbols-outlined">wifi</span>
+                                <p>Airtel</p>
+                            </div>
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </div>
+                        <div class="box">
+                            <div class="icons">
+                                <span class="material-symbols-outlined">wifi</span>
+                                <p>Airtel</p>
+                            </div>
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </div>
+                        <div class="box">
+                            <div class="icons">
+                                <span class="material-symbols-outlined">wifi</span>
+                                <p>Airtel</p>
+                            </div>
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </div>
+                        <div class="box">
+                            <div class="icons">
+                                <span class="material-symbols-outlined">wifi</span>
+                                <p>Airtel</p>
+                            </div>
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="essentials">
+                    <h2>Cardless Payments</h2>
+                    <div class="container">
+                        <div class="box">
+                            <div class="icons">
+                                <span class="material-symbols-outlined">wifi</span>
+                                <p>Airtel</p>
+                            </div>
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </div>
+                        <div class="box">
+                            <div class="icons">
+                                <span class="material-symbols-outlined">wifi</span>
+                                <p>Airtel</p>
+                            </div>
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </div>
+                        <div class="box">
+                            <div class="icons">
+                                <span class="material-symbols-outlined">wifi</span>
+                                <p>Airtel</p>
+                            </div>
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </div>
+                        <div class="box">
+                            <div class="icons">
+                                <span class="material-symbols-outlined">wifi</span>
+                                <p>Airtel</p>
+                            </div>
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </div>
+                        <div class="box">
+                            <div class="icons">
+                                <span class="material-symbols-outlined">wifi</span>
+                                <p>Airtel</p>
+                            </div>
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="essentials">
+                    <h2>Lifestyle</h2>
+                    <div class="container">
+                        <div class="box">
+                            <div class="icons">
+                                <span class="material-symbols-outlined">wifi</span>
+                                <p>Airtel</p>
+                            </div>
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </div>
+                        <div class="box">
+                            <div class="icons">
+                                <span class="material-symbols-outlined">wifi</span>
+                                <p>Airtel</p>
+                            </div>
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </div>
+                        <div class="box">
+                            <div class="icons">
+                                <span class="material-symbols-outlined">wifi</span>
+                                <p>Airtel</p>
+                            </div>
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </div>
+                        <div class="box">
+                            <div class="icons">
+                                <span class="material-symbols-outlined">wifi</span>
+                                <p>Airtel</p>
+                            </div>
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </div>
+                        <div class="box">
+                            <div class="icons">
+                                <span class="material-symbols-outlined">wifi</span>
+                                <p>Airtel</p>
+                            </div>
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-page" id="card_page">
+            <div class="first">
+                <h2>Card</h2>
+                <button>Get A Sage Card</button>
+            </div>
+            <div class="inside-card-page">
+                <div class="body">
+                    <div class="inside-body">
+                        <div class="image">
+                            <img src="../pictures/virtualcard.png" alt="">
+                        </div>
+                        <div class="text">
+                            <p>Spend online and offline with your Kuda cards.</p>
+                        </div>
+                        <div class="container">
+                            <div class="inside-small-container">
+                                <div class="text-it">
+                                    <h4>Send to Beneficiaries</h4>
+                                    <p>Add a beneficiary to get started.</p>
+                                </div>
+                                <button><span class="material-symbols-outlined">chevron_right</span></button>
+                            </div>
+                            <div class="inside-small-container">
+                                <div class="text-it">
+                                    <h4>Send to Beneficiaries</h4>
+                                    <p>Add a beneficiary to get started.</p>
+                                </div>
+                                <button><span class="material-symbols-outlined">chevron_right</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+<script src="../js/dashboard.js"></script>

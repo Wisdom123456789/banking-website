@@ -1,0 +1,38 @@
+{
+  "signUp": [
+    {
+      "id": "2a39",
+      "Firstname": "sage",
+      "Lastname": "mutalib",
+      "Country": "Burkina Faso",
+      "Phone": "09061629641",
+      "Birthdate": "2001-03-18",
+      "Email": "sagewisdom2003@gmail.com",
+      "Password": "letlovelead@!"
+    },
+    {
+      "id": "b794",
+      "Firstname": "Aisha",
+      "Lastname": "sage",
+      "Country": "Nigeria",
+      "Phone": "9061629642",
+      "Birthdate": "2001-03-18",
+      "Email": "sage@gmail.com",
+      "Password": "123456789!!"
+    }
+  ],
+  "logIn": [
+    {
+      "id": "7204",
+      "Username": "sage mutalib",
+      "Email": "sagewisdom2003@gmail.com",
+      "Password": "letlovelead@!"
+    },
+    {
+      "id": "9ae1",
+      "Username": "Aisha sage",
+      "Email": "sage@gmail.com",
+      "Password": "123456789!!"
+    }
+  ]
+}

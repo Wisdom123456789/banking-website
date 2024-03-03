@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+    <div class="login-body">
+        <div class="logo">
+            <img src="../pictures/SAGE_Publishing_logo_2023.svg.png" alt="">
+        </div>
+        <div class="form">
+            <div class="input">
+                <h2>Login to your account</h2>
+                <label for="">Email address</label>
+                <div class="input-email">
+                    <input type="email" placeholder="Enter Your email address" id="email">
+                </div>
+            </div>
+            <div class="input">
+                <label for="">Password</label>
+                <div class="input-password">
+                    <input type="password" placeholder="Enter your password here" id="password">
+                    <button onclick="showPassword()"><span class="material-symbols-outlined" id="visible">visibility</span><span class="material-symbols-outlined" id="novisible">visibility_off</span></button>
+                </div>
+            </div>
+            <div class="forgot">
+                <a href="#">Forgot Password <span class="material-symbols-outlined">keyboard_arrow_right</span></a>
+            </div>
+            <div class="btn">
+                <button onclick="loginpage()">Login</button>
+            </div>
+        </div>
+        <div class="already">
+            <p>Are you a new user? <a href="signUp.html">Create an account</a></p>
+        </div>
+    </div>
+</body>
+</html>
+<script src="../js/login.js"></script>
