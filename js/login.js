@@ -2,13 +2,13 @@ let email = document.getElementById('email')
 let password = document.getElementById('password')
 let visible = document.getElementById('visible')
 let novisible = document.getElementById('novisible')
-// fetch("http://localhost:1234/signUp").then((res)=> res.json()).then((data)=>{
-//     if (data.length == 0) {
-//         window.location.href = '../html/signUp.html'
-//     } else{
-//         alert("Welcome To Your Login")
-//     }
-// })
+fetch("http://localhost:1234/signUp").then((res)=> res.json()).then((data)=>{
+    if (data.length == 0) {
+        window.location.href = '../html/signUp.html'
+    } else{
+        alert("Welcome To Your Login")
+    }
+})
 function showPassword() {
     if (password.type == 'password') {
         password.type = 'text'
@@ -30,7 +30,8 @@ function loginpage() {
                     let myLoginData = {
                         Username: data[index].Firstname + " " + data[index].Lastname,
                         Email: data[index].Email,
-                        Password: data[index].Password
+                        Password: data[index].Password,
+                        Amount: "500.00"
                     };
                     fetch("http://localhost:1234/logIn", {
                         method: 'POST',

@@ -1,38 +1,51 @@
 {
   "signUp": [
     {
-      "id": "2a39",
+      "id": "fbf9",
       "Firstname": "sage",
       "Lastname": "mutalib",
-      "Country": "Burkina Faso",
+      "Country": "Togo",
       "Phone": "09061629641",
-      "Birthdate": "2001-03-18",
-      "Email": "sagewisdom2003@gmail.com",
-      "Password": "letlovelead@!"
-    },
-    {
-      "id": "b794",
-      "Firstname": "Aisha",
-      "Lastname": "sage",
-      "Country": "Nigeria",
-      "Phone": "9061629642",
-      "Birthdate": "2001-03-18",
-      "Email": "sage@gmail.com",
-      "Password": "123456789!!"
+      "Birthdate": "2003-03-18",
+      "Email": "adebayoadiomutalib1@gmail.com",
+      "Password": "12345678!"
     }
   ],
   "logIn": [
     {
-      "id": "7204",
+      "id": "d298",
       "Username": "sage mutalib",
-      "Email": "sagewisdom2003@gmail.com",
-      "Password": "letlovelead@!"
+      "Email": "adebayoadiomutalib1@gmail.com",
+      "Password": "12345678!",
+      "Amount": 500
     },
     {
-      "id": "9ae1",
-      "Username": "Aisha sage",
-      "Email": "sage@gmail.com",
-      "Password": "123456789!!"
+      "id": "3cbc",
+      "Username": "sage mutalib",
+      "Email": "adebayoadiomutalib1@gmail.com",
+      "Password": "12345678!",
+      "Amount": 500
+    },
+    {
+      "id": "6240",
+      "Username": "sage mutalib",
+      "Email": "adebayoadiomutalib1@gmail.com",
+      "Password": "12345678!",
+      "Amount": "500.00"
+    },
+    {
+      "id": "9337",
+      "Username": "sage mutalib",
+      "Email": "adebayoadiomutalib1@gmail.com",
+      "Password": "12345678!",
+      "Amount": "500.00"
+    },
+    {
+      "id": "4350",
+      "Username": "sage mutalib",
+      "Email": "adebayoadiomutalib1@gmail.com",
+      "Password": "12345678!",
+      "Amount": "500.00"
     }
   ]
 }

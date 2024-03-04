@@ -34,6 +34,7 @@ header{
                 button{
                     display: flex;
                     align-items: center;
+                    cursor: pointer;
                     border: none;
                     background: none;
                     gap: 10px;
@@ -47,6 +48,27 @@ header{
                 
             }
         }
+        .account{
+            width: 9%;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            border: none;
+            background: none;
+            gap: 5px;
+            .profile-picture{
+                img{
+                    width: 100%;
+                    border-radius: 100%;
+                }
+            }
+            p{
+                font-family: sans-serif;
+                font-weight: 600;
+                font-size: 14px;
+                color: rgb(151, 151, 151);
+            }
+        }
     }
 }
 main{
@@ -55,6 +77,164 @@ main{
     align-items: center;
     display: flex;
     justify-content: center;
+    .account-page{
+        width: 80%;
+        display: none;
+        padding: 1em 0;
+        .inside-account-page{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h2{
+                padding: 1em 0;
+                font-family: sans-serif;
+                color: rgb(0,25,102);
+                font-size: 20px;
+            }
+            .container-account{
+                width: 90%;
+                display: flex;
+                padding: 2em 0;
+                flex-direction: column;
+                box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.49);
+                -webkit-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.49);
+                -moz-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.49);
+                align-items: center;
+                background-color: white;
+                .back-account{
+                    width: 90%;
+                    button{
+                        background: none;
+                        border: none;
+                        display: flex;
+                        align-items: center;
+                        gap: 9px;
+                        color: rgb(0,25,102);
+                        font-weight: 800;
+                        font-family: sans-serif;
+                        cursor: pointer;
+                    }
+                }
+                .second-account{
+                    width: 90%;
+                    gap: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .profile-image{
+                        width: 90px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 90px;
+                        img{
+                            width: 100%;
+                            border-radius: 100%;
+                        }
+                    }
+                    .third-account{
+                        display: flex;
+                        flex-direction: column;
+                        h4{
+                            font-family: sans-serif;
+                            font-weight: 900;
+                            font-size: 15px;
+                        }
+                        .copy-user-name{
+                            display: flex;
+                            flex-direction: column;
+                            p{
+                                font-size: 12px;
+                                font-family: sans-serif;
+                                color: rgb(0,25,102);
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                }
+                .below-account{
+                    flex-wrap: wrap;
+                    width: 90%;
+                    justify-content: space-between;
+                    padding: 1em 0;
+                    align-items: center;
+                    display: flex;
+                    .each-container{
+                        display: flex;
+                        width: 45%;
+                        padding: 0.4em;
+                        flex-direction: column;
+                        p{
+                            font-family: sans-serif;
+                            color: rgb(151, 151, 151);
+                            font-size: 12px;
+                        }
+                        .editing-container{
+                            border-radius: 5px;
+                            box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.49);
+                            -webkit-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.49);
+                            -moz-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.49);
+                            width: 100%;
+                            padding: 10px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            background-color: white;
+                            select{
+                                width: 100%;
+                                height: 40px;
+                                border-radius: 5px;
+                                border: none;
+                                font-family: sans-serif;
+                                font-weight: 900;
+                                font-size: 17px;
+                            }
+                            p{
+                                color: black;
+                                height: 30px;
+                                padding: 5px 0;
+                                font-weight: 700;
+                                font-family: sans-serif;
+                                font-size: 19px;
+                            }
+                            button{
+                                width: 70px;
+                                height: 25px;
+                                background-color: rgb(0,25,102);
+                                color: white;
+                                font-family: sans-serif;
+                                border-radius: 5px;
+                                border: none;
+                                
+                            }
+                        }
+                    }
+                }
+                .delete-account{
+                    width: 90%;
+                    padding: 0 0 2em 0;
+                    display: flex;
+                    justify-content: space-between;
+                    button{
+                        height: 40px;
+                        box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.49);
+                        -webkit-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.49);
+                        -moz-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.49);
+                        display: flex;
+                        width: 45%;
+                        color: rgb(255, 73, 73);
+                        border-radius: 5px;
+                        border: none;
+                        align-items: center;
+                        font-family: sans-serif;
+                        font-weight: 900;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
     .home-page{
         width: 60%;
         padding: 2em 0;
@@ -480,11 +660,10 @@ main{
     .pay-page{
         width: 60%;
         display: none;
-        background-color: yellow;
         h1{
             width: 100%;
-            background-color: orange;
             font-size: 27px;
+            padding: 1em 0;
             color: rgb(0,25,102);
             font-family: sans-serif;
             text-align: center;
@@ -493,17 +672,18 @@ main{
             display: flex;
             flex-direction: column;
             padding: 1em 0;
-            background-color: blue;
+            background-color: white;
+            -webkit-box-shadow: 1px 2px 40px 0px rgba(0,0,0,0.49);
+            -moz-box-shadow: 1px 2px 40px 0px rgba(0,0,0,0.49);
+            box-shadow: 1px 2px 40px 0px rgba(0,0,0,0.49);
             align-items: center;
             .essentials{
                 display: flex;
                 width: 90%;
                 flex-direction: column;
-                background-color: pink;
                 h2{
                     color: rgb(0,25,102);
                     width: 100%;
-                    background-color: hotpink;
                     font-size: 18px;
                     font-family: sans-serif;
                     font-weight: 900;
@@ -511,7 +691,7 @@ main{
                 }
                 .container{
                     width: 100%;
-                    background-color: yellow;
+                    background-color: white;
                     padding: 0.5em 0;
                     display: flex;
                     justify-content: space-between;
@@ -519,11 +699,15 @@ main{
                     flex-wrap: wrap;
                     .box{
                         width: 45%;
-                        background-color: green;
+                        background-color: white;
+                        -webkit-box-shadow: 0px 0px 56px -14px rgba(0,0,0,0.4);
+                        -moz-box-shadow: 0px 0px 56px -14px rgba(0,0,0,0.4);
+                        box-shadow: 0px 0px 56px -14px rgba(0,0,0,0.4);
                         padding: 0.8em 10px;
                         border-radius: 5px;
                         margin: 0.4em 0;
                         display: flex;
+                        cursor: pointer;
                         justify-content: space-between;
                         align-items: center;
                         .icons{
@@ -533,7 +717,250 @@ main{
                             p{
                                 font-family: sans-serif;
                                 font-weight: 800;
+                                font-size: 15px;
+                                color: rgb(0,25,102);
                             }
+                        }
+                    }
+                }
+            }
+        }
+        .airtel-page{
+            width: 100%;
+            display: none;
+            .general-airtel-page{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                .inside-airtel-page{
+                    width: 60%;
+                    padding: 2.5em;
+                    border-radius: 5px;
+                    border: 1px solid lightgray;
+                    display: flex;
+                    gap: 20px;
+                    align-items: center;
+                    flex-direction: column;
+                    .back{
+                        width: 100%;
+                        button{
+                            display: flex;
+                            align-items: center;
+                            font-family: sans-serif;
+                            background: none;
+                            border: none;
+                            cursor: pointer;
+                            font-weight: 700;
+                            color: rgb(0,25,102);
+                        }
+                    }
+                    .word-airtel{
+                        width: 100%;
+                        h1{
+                            font-size: 20px;
+                            color: black;
+                            padding: 0;
+                        }
+                    }
+                    .amount{
+                        display: flex;
+                        width: 100%;
+                        flex-direction: column;
+                        p{
+                            font-family: sans-serif;
+                            font-weight: 800;
+                            font-size: 14px;
+                            padding: 0.4em 0;
+                        }
+                        .naira-symbol{
+                            width: 100%;
+                            -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.61);
+                            -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.61);
+                            box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.61);
+                            background-color: white;
+                            align-items: center;
+                            border-radius: 5px;
+                            justify-content: space-around;
+                            display: flex;
+                            .naira-note{
+                                width: 10%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                            input{
+                                width: 87%;
+                                padding: 0 0 0 10px;
+                                height: 40px;
+                                outline: none;
+                                border: none;
+                            }
+                            .phone-number{
+                                background: none;
+                            }
+                            select{
+                                width: 100%;
+                                border: none;
+                                font-family: sans-serif;
+                                font-weight: 700;
+                                height: 40px;
+                            }
+                        }
+                        .naira-symbol-one{
+                            background-color: white;
+                        }
+                    }
+                    .btn{
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        button{
+                            width: 156px;
+                            border-radius: 5px;
+                            font-family: sans-serif;
+                            font-weight: 800;
+                            font-size: 15px;
+                            color: white;
+                            background-color: rgb(0,25,102);
+                            border: none;
+                            height: 40px;
+                        }
+                    }
+                }
+            }
+            
+        }
+        .modal{
+            position: fixed;
+            height: 100%;
+            display: none;
+            width: 100%;
+            top:  0;
+            left: 0;
+            background-color: rgba(0,0,0,0.4);
+            .inside-modal{
+                display: flex;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+                .container-modal{
+                    width: 40%;
+                    background-color: white;
+                    padding: 1em;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .confirm-text{
+                        width: 90%;
+                        padding: 0 0 1em 0;
+                        h2{
+                            font-family: sans-serif;
+                            font-weight: 800;
+                            font-size: 22px;
+                            text-align: center;
+                            color: rgb(0,25,102);
+                        }
+                    }
+                    .card-fee{
+                        width: 90%;
+                        display: flex;
+                        padding: 0 0 1em 0;
+                        flex-direction: column;
+                        p{
+                            font-family: sans-serif;
+                            color: rgb(151, 151, 151);
+                            font-weight: 600;
+                            font-size: 13px;
+                            text-align: center;
+                        }
+                        h2{
+                            font-family: sans-serif;
+                            color: rgb(0,25,102);
+                            text-align: center;
+                            font-size: 24px;
+                            font-weight: 700;
+                        }
+                    }
+                    .fee{
+                        display: flex;
+                        align-items: center;
+                        border: none;
+                        border-top: 1px solid lightgray;
+                        border-bottom: 1px solid lightgray;
+                        padding: 10px 0;
+                        width: 90%;
+                        justify-content: space-between;
+                        .fee-one{
+                            p{
+                                font-family: sans-serif;
+                                font-size: 14px;
+                                font-weight: 600;
+                            }
+                            h4{
+                                font-size: 15px;
+                                font-family: sans-serif;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                    .fee-second{
+                        border: none;
+                        border-bottom: 1px solid lightgray;
+                    }
+                    .paragraph{
+                        width: 90%;
+                        padding: 1em 0;
+                        p{
+                            text-align: center;
+                            font-family: sans-serif;
+                            font-weight: 600;
+                            font-size: 17px;
+                        }
+                    }
+                    .transactions-pin{
+                        width: 90%;
+                        display: flex;
+                        flex-direction: column;
+                        p{
+                            text-align: center;
+                            font-family: sans-serif;
+                            font-weight: 700;
+                            padding: 10px 0;
+                        }
+                        .pin-container {
+                            display: flex;
+                            padding: 1em 0;
+                            justify-content: center;
+                          }
+                          input{
+                            width: 40px;
+                            height: 40px;
+                            background-color: lightgray;
+                            border-radius: 5px;
+                            border: none;
+                            margin: 0 5px;
+                            text-align: center;
+                            font-size: 20px;
+                          }
+                    }
+                    .button-group{
+                        width: 90%;
+                        display: flex;
+                        justify-content: center;
+                        gap: 10px;
+                        button{
+                            width: 140px;
+                            height: 40px;
+                            font-family: sans-serif;
+                            font-weight: 800;
+                            border-radius: 5px;
+                            color: rgb(0,25,102);
+                            border: 1px solid rgb(0,25,102);
+                        }
+                        .Confirm{
+                            background-color: rgb(0,25,102);
+                            color: white;
+                            border: none;
                         }
                     }
                 }
@@ -583,15 +1010,14 @@ main{
     .card-page{
         display: none;
         width: 40%;
-        background-color: yellow;
         .first{
             width: 100%;
-            background-color: brown;
             align-items: center;
             display: flex;
             justify-content: space-between;
             h2{
                 font-size: 24px;
+                color: rgb(0,25,102);
                 font-family: sans-serif;
                 font-weight: 900;
             }
@@ -599,8 +1025,9 @@ main{
                 width: 152px;
                 height: 48px;
                 font-weight: 700;
+                color: rgb(0,25,102);
+                border: 1px solid rgb(0,25,102);
                 font-family: sans-serif;
-                border: none;
                 border-radius: 5px;
             }
         }
@@ -608,36 +1035,42 @@ main{
             display: flex;
             flex-direction: column;
             padding: 2em 0;
-            background-color: indianred;
             width: 100%;
             .body{
                 width: 100%;
-                background-color: blue;
+                background-color: white;
+                -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.61);
+                -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.61);
+                box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.61);
                 display: flex;
+                border-radius: 5px;
                 padding: 1em 0;
                 flex-direction: column;
                 align-items: center;
                 .inside-body{
-                    width: 80%;
-                    background-color: green;
+                    width: 75%;
                     display: flex;
                     gap: 10px;
                     flex-direction: column;
                     align-items: center;
                     .image{
                         width: 100%;
-                        background-color: purple;
                         img{
                             width: 100%;
                         }
                     }
                     .text{
                         width: 100%;
-                        background-color: rebeccapurple;
+                        padding: 1em 0;
+                        p{
+                            font-family: sans-serif;
+                            color: rgb(0,25,102);
+                            font-size: 14px;
+                            font-weight: 600;
+                        }
                     }
                     .container{
                         width: 100%;
-                        background-color: khaki;
                         padding: 0.5em 0;
                         display: flex;
                         gap: 10px;
@@ -645,15 +1078,35 @@ main{
                         align-items: center;
                         .inside-small-container{
                             width: 90%;
-                            background-color: indianred;
+                            background-color: white;
+                            -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.61);
+                            -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.61);
+                            box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.61);
                             border-radius: 5px;
                             padding: 0.4em 0;
                             display: flex;
                             justify-content: space-around;
+                            button{
+                                background: none;
+                                border: none;
+                            }
+                            .text-it{
+                                h4{
+                                    font-family: sans-serif;
+                                    color: rgb(0,25,102);
+                                    font-weight: 900;
+                                    font-size: 14px;
+                                }
+                                p{
+                                    font-family: sans-serif;
+                                    font-size: 10px;
+                                    font-weight: 500;
+                                }
+                            }
                         }
                     }
                 }
             }
         }
-        }
+    }
 }

@@ -30,12 +30,105 @@
                     <button onclick="cardpage()" id="card"><span class="material-symbols-outlined">credit_card</span><p>Card</p></button>
                 </div>
             </div>
-            <div class="account">
+            <button onclick="accountpage()" class="account">
+                <div class="profile-picture">
+                    <img src="../pictures/invess.webp" alt="">
+                </div>
                 <p>Account</p>
-            </div>
+            </button>
         </div>
     </header>
     <main>
+        <div class="account-page" id="account-page">
+            <div class="inside-account-page">
+                <h2>Account Details</h2>
+            <div class="container-account">
+                <div class="back-account">
+                    <button><span class="material-symbols-outlined">chevron_left</span> Back</button>
+                </div>
+                <div class="second-account">
+                    <div class="profile-image">
+                        <img src="../pictures/backgroundimage.jpg" alt="">
+                    </div>
+                    <div class="third-account">
+                        <h4>Mutalib Adio</h4>
+                        <div class="copy-user-name">
+                            <p>Copy Username</p>
+                            <p>@mutalib</p>
+                        </div>
+                        <div class="copy-user-name">
+                            <p>Copy Account Number</p>
+                            <p>1234567890</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="below-account">
+                    <div class="each-container">
+                        <p>Your Username</p>
+                        <div class="editing-container">
+                            <p>Mutalib</p>
+                            <button>Edit</button>
+                        </div>
+                    </div>
+                    <div class="each-container">
+                        <p>Account Name</p>
+                        <div class="editing-container">
+                            <p>Mutalib Adebayo Adio</p>
+                            <button>Edit</button>
+                        </div>
+                    </div>
+                    <div class="each-container">
+                        <p>Home Address</p>
+                        <div class="editing-container">
+                            <p>House3 Alubarika</p>
+                            <button>Edit</button>
+                        </div>
+                    </div>
+                    <div class="each-container">
+                        <p>Email Address</p>
+                        <div class="editing-container">
+                            <p>adebayoadiomutalib</p>
+                            <button>Edit</button>
+                        </div>
+                    </div>
+                    <div class="each-container">
+                        <p>Phone Number</p>
+                        <div class="editing-container">
+                            <p>+234 9061629641</p>
+                            <button>Edit</button>
+                        </div>
+                    </div>
+                    <div class="each-container">
+                        <p>Identification</p>
+                        <div class="editing-container">
+                            <p>NIN</p>
+                            <button>Edit</button>
+                        </div>
+                    </div>
+                    <div class="each-container">
+                        <p>Next of Kin</p>
+                        <div class="editing-container">
+                            <p>Muhammed Sanni</p>
+                            <button>Edit</button>
+                        </div>
+                    </div>
+                    <div class="each-container">
+                        <p></p>
+                        <div class="editing-container">
+                            <select name="" id="">
+                                <option>Single</option>
+                                <option>Married</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="delete-account">
+                    <button>Delete Account<span class="material-symbols-outlined">chevron_right</span></button>
+                    <button>Restrict Account<span class="material-symbols-outlined">chevron_right</span></button>
+                </div>
+            </div>
+            </div>
+        </div>
         <div class="home-page" id="home_page">
             <div class="intro">
                 <h2>Welcome <span id="username"></span>!</h2>
@@ -50,7 +143,7 @@
                     </div>
                     <div class="currency" onclick="itdisappears()">
                         <small>Nigerian Naira</small>
-                        <h2 id="currency">₦<span>1000.00</span></h2>
+                        <h2 id="currency">₦<span id="money"></span></h2>
                         <small id="updateTime"></small>
                     </div>
                 </div>
@@ -202,11 +295,11 @@
         </div>
         <div class="pay-page" id="pay_page">
             <h1>Pay</h1>
-            <div class="inside-pay-page">
+            <div class="inside-pay-page" id="inside-pay-page">
                 <div class="essentials">
                     <h2>Essentials</h2>
                     <div class="container">
-                        <div class="box">
+                        <div class="box" onclick="airtel()">
                             <div class="icons">
                                 <span class="material-symbols-outlined">wifi</span>
                                 <p>Airtel</p>
@@ -214,30 +307,30 @@
                             <span class="material-symbols-outlined">chevron_right</span>
                         </div>
                         <div class="box">
-                            <div class="icons">
+                            <div class="icons" onclick="internet()">
                                 <span class="material-symbols-outlined">wifi</span>
-                                <p>Airtel</p>
+                                <p>Internet</p>
                             </div>
                             <span class="material-symbols-outlined">chevron_right</span>
                         </div>
                         <div class="box">
                             <div class="icons">
                                 <span class="material-symbols-outlined">wifi</span>
-                                <p>Airtel</p>
+                                <p>TV</p>
                             </div>
                             <span class="material-symbols-outlined">chevron_right</span>
                         </div>
                         <div class="box">
                             <div class="icons">
                                 <span class="material-symbols-outlined">wifi</span>
-                                <p>Airtel</p>
+                                <p>Electricity</p>
                             </div>
                             <span class="material-symbols-outlined">chevron_right</span>
                         </div>
                         <div class="box">
                             <div class="icons">
                                 <span class="material-symbols-outlined">wifi</span>
-                                <p>Airtel</p>
+                                <p>Solar</p>
                             </div>
                             <span class="material-symbols-outlined">chevron_right</span>
                         </div>
@@ -249,35 +342,35 @@
                         <div class="box">
                             <div class="icons">
                                 <span class="material-symbols-outlined">wifi</span>
-                                <p>Airtel</p>
+                                <p>Pay with Bank</p>
                             </div>
                             <span class="material-symbols-outlined">chevron_right</span>
                         </div>
                         <div class="box">
                             <div class="icons">
                                 <span class="material-symbols-outlined">wifi</span>
-                                <p>Airtel</p>
+                                <p>Pay with USSD</p>
                             </div>
                             <span class="material-symbols-outlined">chevron_right</span>
                         </div>
                         <div class="box">
                             <div class="icons">
                                 <span class="material-symbols-outlined">wifi</span>
-                                <p>Airtel</p>
+                                <p>POS Terminal</p>
                             </div>
                             <span class="material-symbols-outlined">chevron_right</span>
                         </div>
                         <div class="box">
                             <div class="icons">
                                 <span class="material-symbols-outlined">wifi</span>
-                                <p>Airtel</p>
+                                <p>ATM Withdrawal</p>
                             </div>
                             <span class="material-symbols-outlined">chevron_right</span>
                         </div>
                         <div class="box">
                             <div class="icons">
                                 <span class="material-symbols-outlined">wifi</span>
-                                <p>Airtel</p>
+                                <p>Pay A Business</p>
                             </div>
                             <span class="material-symbols-outlined">chevron_right</span>
                         </div>
@@ -289,37 +382,159 @@
                         <div class="box">
                             <div class="icons">
                                 <span class="material-symbols-outlined">wifi</span>
-                                <p>Airtel</p>
+                                <p>Betting</p>
                             </div>
                             <span class="material-symbols-outlined">chevron_right</span>
                         </div>
                         <div class="box">
                             <div class="icons">
                                 <span class="material-symbols-outlined">wifi</span>
-                                <p>Airtel</p>
+                                <p>Gift Cards</p>
                             </div>
                             <span class="material-symbols-outlined">chevron_right</span>
                         </div>
                         <div class="box">
                             <div class="icons">
                                 <span class="material-symbols-outlined">wifi</span>
-                                <p>Airtel</p>
+                                <p>Transport</p>
                             </div>
                             <span class="material-symbols-outlined">chevron_right</span>
                         </div>
                         <div class="box">
                             <div class="icons">
                                 <span class="material-symbols-outlined">wifi</span>
-                                <p>Airtel</p>
+                                <p>Education</p>
                             </div>
                             <span class="material-symbols-outlined">chevron_right</span>
                         </div>
-                        <div class="box">
-                            <div class="icons">
-                                <span class="material-symbols-outlined">wifi</span>
-                                <p>Airtel</p>
+                    </div>
+                </div>
+            </div>
+            <div class="airtel-page" id="airtel_page">
+                <div class="general-airtel-page">
+                    <div class="inside-airtel-page">
+                        <div class="back">
+                            <button onclick="goback()"><span class="material-symbols-outlined">chevron_left</span> back</button>
+                        </div>
+                        <div class="word-airtel">
+                            <h1>Airtel</h1>
+                        </div>
+                        <div class="amount">
+                            <p>Amount</p>
+                            <div class="naira-symbol">
+                                <div class="naira-note">
+                                    ₦
+                                </div>
+                                <input type="number" placeholder="How much?" id="money-for-airtime">
                             </div>
-                            <span class="material-symbols-outlined">chevron_right</span>
+                        </div>
+                        <div class="amount">
+                            <p>Phone Number</p>
+                            <div class="naira-symbol naira-symbol-one">
+                                <input class="phone-number" type="number" placeholder="What phone number?" id="phone-for-airtime">
+                            </div>
+                        </div>
+                        <div class="amount">
+                            <p>Choose a Network</p>
+                            <div class="naira-symbol">
+                                <select name="" id="network-for-airtime">
+                                    <option>Select</option>
+                                    <option>MTN</option>
+                                    <option>GLO</option>
+                                    <option>9MOBILE</option>
+                                    <option>AIRTEL</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="btn">
+                            <button onclick="payMoney()">Pay</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="airtel-page" id="data_page">
+                <div class="general-airtel-page">
+                    <div class="inside-airtel-page">
+                        <div class="back">
+                            <button onclick="goback()"><span class="material-symbols-outlined">chevron_left</span> back</button>
+                        </div>
+                        <div class="word-airtel">
+                            <h1>Internet Data</h1>
+                        </div>
+                        <div class="amount">
+                            <p>Amount</p>
+                            <div class="naira-symbol">
+                                <div class="naira-note">
+                                    ₦
+                                </div>
+                                <input type="number" placeholder="How much?">
+                            </div>
+                        </div>
+                        <div class="amount">
+                            <p>Phone Number</p>
+                            <div class="naira-symbol naira-symbol-one">
+                                <input class="phone-number" type="number" placeholder="What phone number?">
+                            </div>
+                        </div>
+                        <div class="amount">
+                            <p>Choose a Network</p>
+                            <div class="naira-symbol">
+                                <select name="" id="">
+                                    <option>Select</option>
+                                    <option>MTN</option>
+                                    <option>GLO</option>
+                                    <option>9MOBILE</option>
+                                    <option>AIRTEL</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="btn">
+                            <button>Pay</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal">
+                <div class="inside-modal">
+                    <div class="container-modal">
+                        <div class="confirm-text">
+                            <h2>Confirm</h2>
+                        </div>
+                        <div class="card-fee">
+                            <p>Total Airtime fee</p>
+                            <h2>₦ <span>1,000.00</span></h2>
+                        </div>
+                        <div class="fee">
+                            <div class="fee-one">
+                                <p>Airtime Issuing Fee</p>
+                                <h4>₦ <span>1000.00</span></h4>
+                            </div>
+                            <div class="fee-two">
+                                <p>Delivery Fee:</p>
+                                <h4>₦0.00</h4>
+                            </div>
+                        </div>
+                        <div class="fee fee-second">
+                            <div class="fee-one">
+                                <p>From:</p>
+                                <h4>NGN Balance</h4>
+                            </div>
+                        </div>
+                        <div class="paragraph">
+                            <p>Payment for Airtime is final and cannot be refunded</p>
+                        </div>
+                        <div class="transactions-pin">
+                            <p>Please, type in your transaction PIN.</p>
+                            <div class="pin-container">
+                                <input type="text" maxlength="1" id="pin1" oninput="moveToNext()">
+                                <input type="text" maxlength="1" id="pin2" oninput="moveToNext()">
+                                <input type="text" maxlength="1" id="pin3" oninput="moveToNext()">
+                                <input type="text" maxlength="1" id="pin4" oninput="moveToPrev()">
+                            </div>
+                        </div>
+                        <div class="button-group">
+                            <button>Cancel</button> 
+                            <button class="Confirm">Confirm</button>
                         </div>
                     </div>
                 </div>
@@ -342,15 +557,15 @@
                         <div class="container">
                             <div class="inside-small-container">
                                 <div class="text-it">
-                                    <h4>Send to Beneficiaries</h4>
-                                    <p>Add a beneficiary to get started.</p>
+                                    <h4>Get your Sage's Card now</h4>
+                                    <p>You can use it anywhere you are.</p>
                                 </div>
                                 <button><span class="material-symbols-outlined">chevron_right</span></button>
                             </div>
                             <div class="inside-small-container">
                                 <div class="text-it">
-                                    <h4>Send to Beneficiaries</h4>
-                                    <p>Add a beneficiary to get started.</p>
+                                    <h4>Sage' Card FAQs</h4>
+                                    <p>Learn more about Sage Cards.</p>
                                 </div>
                                 <button><span class="material-symbols-outlined">chevron_right</span></button>
                             </div>
