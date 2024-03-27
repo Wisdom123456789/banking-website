@@ -28,10 +28,11 @@ function loginpage() {
             for (let index = 0; index < data.length; index++) {
                 if (email.value === data[index].Email && password.value === data[index].Password) {
                     let myLoginData = {
-                        Username: data[index].Firstname + " " + data[index].Lastname,
+                        Username: data[index].Username,
                         Email: data[index].Email,
                         Password: data[index].Password,
-                        Amount: "500.00"
+                        UserId : data[index].id,
+                        Pin : data[index].PIN
                     };
                     fetch("http://localhost:1234/logIn", {
                         method: 'POST',

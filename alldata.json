@@ -1,51 +1,151 @@
 {
   "signUp": [
     {
-      "id": "fbf9",
-      "Firstname": "sage",
-      "Lastname": "mutalib",
-      "Country": "Togo",
+      "id": "9682",
+      "Firstname": "Sage",
+      "Lastname": "Mutalib",
+      "Country": "Ghana",
       "Phone": "09061629641",
-      "Birthdate": "2003-03-18",
-      "Email": "adebayoadiomutalib1@gmail.com",
-      "Password": "12345678!"
+      "Birthdate": "2001-03-18",
+      "Email": "sagewisdom2003@gmail.com",
+      "Password": "123456",
+      "Marital": "Married",
+      "Username": "Sage@19",
+      "Gender": "Male",
+      "PIN": "2001",
+      "Amount": 800,
+      "ProfilePicture" : ""
+    },
+    {
+      "id": "3941",
+      "Firstname": "Johnad",
+      "Lastname": "Brother",
+      "Country": "USA",
+      "Phone": "09061629641",
+      "Birthdate": "2001-03-18",
+      "Email": "johnad@gmail.com",
+      "Password": "123456",
+      "Marital": "Single",
+      "Username": "@john",
+      "Gender": "female",
+      "PIN": "9999",
+      "Amount": 1000,
+      "ProfilePicture" : ""
+    },
+    {
+      "id": "94e4",
+      "Firstname": "Zainab",
+      "Lastname": "Akim",
+      "Country": "Nigeria",
+      "Phone": "09029928141",
+      "Birthdate": "2003-06-29",
+      "Email": "akim@gmail.com",
+      "Password": "123456",
+      "Marital": "Married",
+      "Username": "@Zainab",
+      "Gender": "Goat",
+      "PIN": "7777",
+      "Amount": 700,
+      "ProfilePicture" : ""
+    },
+    {
+      "id": "9c8c",
+      "Firstname": "Hikmah",
+      "Lastname": "Oyindamola",
+      "Phone": "09075470988",
+      "Birthdate": "2006-07-15",
+      "Email": "hikmot@gmail.com",
+      "Password": "omomummy",
+      "Marital": "Married",
+      "Username": "keemah",
+      "Gender": "Male",
+      "PIN": "2008",
+      "Amount": 1500,
+      "ProfilePicture" : ""
     }
   ],
   "logIn": [
     {
-      "id": "d298",
-      "Username": "sage mutalib",
-      "Email": "adebayoadiomutalib1@gmail.com",
-      "Password": "12345678!",
-      "Amount": 500
+      "id": "ef40",
+      "Username": "Sage@19",
+      "Email": "sagewisdom2003@gmail.com",
+      "Password": "123456",
+      "UserId": "9682",
+      "Pin": "2001"
+    }
+  ],
+  "history": [
+    {
+      "id": "7bea",
+      "Name": "Sage",
+      "Method": "airtime",
+      "Dateof": "3/26/2024",
+      "Time": "6:47:16 PM",
+      "Description": "GLO",
+      "Amount": "100",
+      "UserHistoryId": "9682"
     },
     {
-      "id": "3cbc",
-      "Username": "sage mutalib",
-      "Email": "adebayoadiomutalib1@gmail.com",
-      "Password": "12345678!",
-      "Amount": 500
+      "id": "7c61",
+      "Name": "Sage",
+      "Method": "Data",
+      "Dateof": "3/26/2024",
+      "Time": "6:47:48 PM",
+      "Description": "9MOBILE",
+      "Amount": "100",
+      "UserHistoryId": "9682"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "225e",
+      "Name": "Sage",
+      "Method": "Send",
+      "Dateof": "3/26/2024",
+      "Time": "10:00:24 PM",
+      "Description": "for club",
+      "Amount": "100",
+      "UserTransactionId": "9682"
     },
     {
-      "id": "6240",
-      "Username": "sage mutalib",
-      "Email": "adebayoadiomutalib1@gmail.com",
-      "Password": "12345678!",
-      "Amount": "500.00"
+      "id": "38e6",
+      "Name": "Sage",
+      "Method": "Send",
+      "Dateof": "3/26/2024",
+      "Time": "10:54:56 PM",
+      "Description": "for education",
+      "Amount": "100",
+      "UserTransactionId": "9682"
     },
     {
-      "id": "9337",
-      "Username": "sage mutalib",
-      "Email": "adebayoadiomutalib1@gmail.com",
-      "Password": "12345678!",
-      "Amount": "500.00"
+      "id": "a3b2",
+      "Name": "Zainab",
+      "Method": "Send",
+      "Dateof": "3/26/2024",
+      "Time": "11:14:25 PM",
+      "Description": "for school",
+      "Amount": "300",
+      "UserTransactionId": "94e4"
     },
     {
-      "id": "4350",
-      "Username": "sage mutalib",
-      "Email": "adebayoadiomutalib1@gmail.com",
-      "Password": "12345678!",
-      "Amount": "500.00"
+      "id": "919c",
+      "Name": "Sage",
+      "Method": "Send",
+      "Dateof": "3/26/2024",
+      "Time": "11:48:23 PM",
+      "Description": "for school",
+      "Amount": "500",
+      "UserTransactionId": "9682"
+    },
+    {
+      "id": "a5bb",
+      "Name": "Johnad",
+      "Method": "Send",
+      "Dateof": "3/26/2024",
+      "Time": "11:51:45 PM",
+      "Description": "for education",
+      "Amount": "500",
+      "UserTransactionId": "3941"
     }
   ]
 }
