@@ -33,7 +33,10 @@
             </div>
             <button onclick="accountpage()" class="account">
                 <div class="profile-picture">
-                    <i class="fa-regular fa-user fa-2xl" style="color: rgb(0, 25, 102);"></i>
+                    <div class="icon-for-profile-picture" id="icon-for-profile-picture">
+                        <i class="fa-regular fa-user fa-2xl" style="color: rgb(0, 25, 102);"></i>
+                    </div>
+                    <img src="" alt="" id="profilepic">
                 </div>
                 <p>Account</p>
             </button>
@@ -47,8 +50,10 @@
                     <div class="container-account">
                         <div class="second-account">
                             <div class="profile-image" onclick="openImage()">
-                                <i class="fa-regular fa-user fa-2xl" style="color: rgb(0, 25, 102);"></i>
-
+                                <div class="icon-for-profile-picture" id="icon-for-profile-picture-two">
+                                    <i class="fa-regular fa-user fa-2xl" style="color: rgb(0, 25, 102);"></i>
+                                </div>
+                                <img src="" alt="" id="profilePicTwo">
                             </div>
                             <div class="third-account">
                                 <h4>Mutalib Adio</h4>
@@ -160,10 +165,17 @@
                         <div class="sign-out">
                             <button onclick="signOut()">Sign Out</button>
                         </div>
-                        <div class="modal-for-image">
+                        <div class="modal-for-image" id="modal-for-image">
                             <div class="inside-modal-for-image">
                                 <div class="container-for-modal-for-image">
-                                    
+                                    <div class="image-div">
+                                        <img src="" alt="" id="image">
+                                        <input type="file" id="imageForProfile" onchange="changeimg()">
+                                    </div>
+                                    <div class="image-btn">
+                                        <button class="cancel-img-btn" onclick="cancelModalForImage()">Cancel</button>
+                                        <button onclick="confimUpdateForProfile()">Confirm</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -179,7 +191,10 @@
                         </div>
                         <div class="second-account">
                             <div class="profile-image">
-                                <i class="fa-regular fa-user fa-2xl" style="color: rgb(0, 25, 102);"></i>
+                                <div class="icon-for-profile-picture" id="icon-for-profile-picture-three">
+                                    <i class="fa-regular fa-user fa-2xl" style="color: rgb(0, 25, 102);"></i>
+                                </div>
+                                <img src="" alt="" id="profilepicThree">
                             </div>
                             <div class="third-account">
                                 <h4 id="userId"></h4>
@@ -421,7 +436,10 @@
                         <span class="material-symbols-outlined">more_horiz</span>
                     </div>
                     <div class="flag">
-                        <img src="../pictures/How-Cryptocurrencies-Might-Affect-the-Banking-Sector.webp" alt="">
+                        <div id="icon-for-profile-picture-one">
+                            <i class="fa-regular fa-user fa-2xl" style="color: rgb(0, 25, 102);"></i>
+                        </div>
+                        <img src="" alt="" id="toDisplayProfileImage">
                     </div>
                     <div class="currency" onclick="itdisappears()">
                         <small>Nigerian Naira</small>

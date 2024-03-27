@@ -2,6 +2,14 @@ let userFullName = document.getElementById("username")
 let moneyToDisplay = document.getElementById("money")
 let showAccountNumber = document.getElementById("showAccountNumber")
 let timeToDisplay = document.getElementById("updateTime")
+let toDisplayProfileImage = document.getElementById("toDisplayProfileImage")
+let profilepic = document.getElementById("profilepic")
+let profilePicTwo = document.getElementById("profilePicTwo")
+let profilePicThree = document.getElementById("profilepicThree")
+let iconForProfilePicture = document.getElementById("icon-for-profile-picture")
+let iconForProfilePictureOne = document.getElementById("icon-for-profile-picture-one")
+let iconForProfilePictureTwo = document.getElementById("icon-for-profile-picture-two")
+let iconForProfilePictureThree = document.getElementById("icon-for-profile-picture-three")
 function updatingit() {
     fetch("http://localhost:1234/signUp").then((res)=> res.json()).then((data)=>{
         fetch("http://localhost:1234/logIn").then((res)=>res.json()).then((userinformations)=>{
@@ -11,6 +19,27 @@ function updatingit() {
                     moneyToDisplay.innerHTML = data[index].Amount
                     timeToDisplay.innerHTML = new Date().toLocaleDateString()
                     showAccountNumber.innerHTML = data[index].Phone
+                    if (data[index].ProfilePicture == "") {
+                        profilepic.style.display = "none"
+                        profilePicTwo.style.display = "none"
+                        profilePicThree.style.display = "none"
+                        iconForProfilePicture.style.display = "block"
+                        toDisplayProfileImage.style.display = "none"
+                        iconForProfilePictureOne.style.display = "block"
+                        iconForProfilePictureTwo.style.display = "block"
+                        iconForProfilePictureThree.style.display = "block"
+                    } else{
+                        profilepic.style.display = "block"
+                        toDisplayProfileImage.style.display = "block"
+                        toDisplayProfileImage.src = data[index].ProfilePicture
+                        profilepic.src = data[index].ProfilePicture
+                        profilePicTwo.src = data[index].ProfilePicture
+                        profilePicThree.src = data[index].ProfilePicture
+                        iconForProfilePictureOne.style.display = "none"
+                        iconForProfilePictureTwo.style.display = "none"
+                        iconForProfilePictureThree.style.display = "none"
+                        iconForProfilePicture.style.display = "none"
+                    }
                     fetchingData()
                     fetchingFromTransactionHistory()
                     fetchingDataForTransaction()

@@ -13,6 +13,7 @@ const copyAccountNumber = document.getElementById("copyAccountNumber")
 const maritalStatus = document.getElementById("maritalStatus")
 const myModalone = document.getElementById("myModalone")
 let showuserUsername = document.getElementById("showuserUsername")
+let modalForImage = document.getElementById("modal-for-image")
 let userUsername = document.getElementById("userUsername")
 let showuserUsernameTwo = document.getElementById("showuserUsernameTwo")
 let showuserUsernameFive = document.getElementById("showuserUsernameFive")
@@ -35,6 +36,9 @@ let userUsernameSix = document.getElementById("userUsernameSix")
 let userUsernameSeven = document.getElementById("userUsernameSeven")
 let userUsernameEight = document.getElementById("userUsernameEight")
 let userUsernametwo = document.getElementById("userUsernametwo")
+let imageForProfile = document.getElementById("imageForProfile")
+let image = document.getElementById("image")
+let imageURL
 function changeit() {
     let element = document.body
     element.classList.toggle("dark-mode")
@@ -392,6 +396,43 @@ function confirmEditingEight() {
                     })
                 }).then((res)=>res.json()).then((editing)=>{
                     location.reload()
+                })
+            }
+        }
+    })
+}
+function cancelModalForImage() {
+    modalForImage.style.display = "none"
+}
+function openImage() {
+    modalForImage.style.display = "block"
+}
+function changeimg() {
+    let filereader = new FileReader()
+    filereader.addEventListener("load", (ev) =>{
+        let result = ev.target.result
+        image.src = result
+        imageURL = result
+    })
+    if(imageForProfile){
+        filereader.readAsDataURL(imageForProfile.files[0]);
+    }
+}
+function confimUpdateForProfile() {
+    Promise.all([
+        fetch("http://localhost:1234/signUp").then((res)=>res.json()),
+        fetch("http://localhost:1234/logIn").then((res)=>res.json())
+    ]).then(([data, loginInfo])=>{
+        for (let index = 0; index < data.length; index++) {
+            if (data[index].id == loginInfo[0].UserId) {
+                fetch(`http://localhost:1234/signUp/${data[index].id}`,{
+                    headers : {
+                        "content-type" : "application/json"
+                    },
+                    method : "PATCH",
+                    body : JSON.stringify({
+                        ProfilePicture : imageURL
+                    })
                 })
             }
         }
